@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class SayHelloController {
 
-	//say-hello
+	// "say-hello"
 	@RequestMapping("say-hello")
 	@ResponseBody
 	public String sayHello() {
 		return "Hello, what are you learning today?";
 	}
 	
-	//say-hello
+	// "say-hello-html"
 	@RequestMapping("say-hello-html")
 	@ResponseBody
 	public String sayHelloHtml() {
@@ -28,4 +28,15 @@ public class SayHelloController {
 		
 		return sb.toString();
 	}
+	
+	//JSP
+	//sayHello.jsp
+	
+	// "say-hello-jsp"
+	// /src/main/resources/META-INF/resources/WEB-INF/jsp/sayHello.jsp
+	@RequestMapping("say-hello-jsp")
+	public String sayHelloJsp() {
+		return "sayHello";
+	}
+	
 }
